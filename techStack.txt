@@ -1,0 +1,9 @@
+main lanuage: python
+web server: flask
+web interace: html/css/js
+tv display: pygame (or other GUI library)
+database: sqlite
+tv controls: cec-client
+tv power sacheulde: cron jobs
+weather data: OpenWeatherMap API
+traffic data: Google Maps API
