@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home TV</title>
+</head>
+<body>
+  <button onclick="tvon()">Turn TV On</button>
+
+  <button onclick="tvoff()">Turn TV Off</button>
+
+  <script>
+    async function tvon() {
+      try {
+        const response = await fetch('/tv-controls/turn_on', { method: 'POST' });
+        if (response.ok) {
+          console.log('Python function called successfully');
+        } else {
+          console.error('Error calling Python function');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    }
+
+    async function tvoff() {
+      try{
+        const response = await fetch('/tv-controls/turn_off', { method: 'POST' });
+        if (response.ok) {
+          console.log('Python function called successfully');
+        } else {
+          console.error('Error calling Python function');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    }
+  </script>
+
+
+
+</body>
+</html>
